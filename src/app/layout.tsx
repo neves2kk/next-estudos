@@ -1,7 +1,10 @@
+"use client"
+
 import { FilterContextProvider } from "@/contexts/FilterContext";
 import { Header } from "../components/Header";
 import "./globals.css";
 import {Saira} from "next/font/google";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const saira = Saira({
   subsets: ["latin"],
@@ -9,6 +12,7 @@ const saira = Saira({
   variable: "--font-saira",
 });
 
+const queryClient = new QueryClient();
 
 export default function RootLayout({
   children,
@@ -20,10 +24,12 @@ export default function RootLayout({
       <body
         className={saira.className}
       >
-        <FilterContextProvider>
-          <Header/>
-          {children}
-        </FilterContextProvider>
+        <QueryClientProvider client={queryClient}>
+          <FilterContextProvider>
+            <Header/>
+            {children}
+          </FilterContextProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );

@@ -36,8 +36,8 @@ export function FilterBar(){
 
             </div>
 
-            <div className="flex w-40 items-center">
-                <button className="text-(--text-dark) cursor-pointer flex w-40 items-center" onClick={()=> setPopUpOpen(!popUpOpen)}>
+            <div className="flex w-40 items-center gap-2 relative">
+                <button className="text-(--text-dark) cursor-pointer flex w-40 items-end justify-end " onClick={()=> setPopUpOpen(!popUpOpen)}>
                     Organizar por
                     <img src={Setinha.src} alt="Setinha" />
                 </button>
