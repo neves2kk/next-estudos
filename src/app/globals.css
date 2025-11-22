@@ -3,6 +3,8 @@
 :root {
   --logo-color: #5D5D6D;
   --text-dark: #41414D;
+  --background: #F3F5F6;
+  --bg-blue: #115D8C;
 }
 
 body {

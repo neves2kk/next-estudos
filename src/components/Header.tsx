@@ -9,10 +9,10 @@ const sairaStencil = Saira_Stencil_One({
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between py-5 px-40 bg-white">
+    <header className="flex items-center justify-between py-1 px-8 bg-white sm:py-5 sm:px-40 ">
       <div>
         <a
-          className={`${sairaStencil.className} font-bold text-4xl text-(--logo-color) cursor-pointer`}
+          className={`${sairaStencil.className} font-bold  text-(--logo-color) cursor-pointer text-2xl sm:text-4xl`}
         >
           capputeeno
         </a>
@@ -22,7 +22,7 @@ export function Header() {
         <div className="flex  bg-[#F3F5F6]">
 
             <input
-            className="outline-none  w-80 px-2.5 py-2 rounded text-(--text-dark)"
+            className="outline-none  w-60 px-2.5 py-2 rounded text-(--text-dark) sm:w-80"
             placeholder="Procurando por algo específico?"
             />
             <img src={Lupa.src} alt="Lupa" className="pr-2 cursor-pointer, h-auto w-10" />
